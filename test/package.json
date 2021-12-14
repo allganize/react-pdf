@@ -13,10 +13,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@allganize/react-pdf": "portal:../",
     "prop-types": "^15.6.2",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-pdf": "portal:../"
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

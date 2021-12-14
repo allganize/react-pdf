@@ -1,4 +1,4 @@
-import { dataURItoByteString } from 'react-pdf/src/shared/utils';
+import { dataURItoByteString } from '@allganize/react-pdf/src/shared/utils';
 
 function dataURItoUint8Array(dataURI) {
   const byteString = dataURItoByteString(dataURI);

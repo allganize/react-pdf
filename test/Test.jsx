@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { PDFDataRangeTransport } from 'pdfjs-dist';
-import { Document, Outline, Page } from 'react-pdf/src/entry.webpack';
-import 'react-pdf/src/Page/AnnotationLayer.css';
+import { Document, Outline, Page } from '@allganize/react-pdf/src/entry.webpack';
+import '@allganize/react-pdf/src/Page/AnnotationLayer.css';
 
 import {
   isArrayBuffer,
@@ -10,7 +10,7 @@ import {
   isBrowser,
   isFile,
   loadFromFile,
-} from 'react-pdf/src/shared/utils';
+} from '@allganize/react-pdf/src/shared/utils';
 
 import './Test.less';
 

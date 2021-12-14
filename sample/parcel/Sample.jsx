@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.parcel';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import { Document, Page } from '@allganize/react-pdf/dist/esm/entry.parcel';
+import '@allganize/react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 import './Sample.less';
 

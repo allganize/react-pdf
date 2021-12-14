@@ -104,12 +104,15 @@ export class PageCanvasInternal extends PureComponent {
 
     canvas.style.width = `${Math.floor(viewport.width)}px`;
     canvas.style.height = `${Math.floor(viewport.height)}px`;
+    const pixelRatio = getPixelRatio();
+    const transform = pixelRatio !== 1 ? [pixelRatio, 0, 0, pixelRatio, 0, 0] : null;
 
     const renderContext = {
       get canvasContext() {
         return canvas.getContext('2d');
       },
-      viewport: renderViewport,
+      viewport,
+      transform,
       renderInteractiveForms,
     };
 

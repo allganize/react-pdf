@@ -89,6 +89,7 @@ export class PageInternal extends PureComponent {
       onRenderAnnotationLayerSuccess,
       onRenderError,
       onRenderSuccess,
+      ratio,
       renderInteractiveForms,
     } = this.props;
 
@@ -103,6 +104,7 @@ export class PageInternal extends PureComponent {
       onRenderError,
       onRenderSuccess,
       page,
+      ratio,
       renderInteractiveForms,
       rotate: this.rotate,
       scale: this.scale,
@@ -414,6 +416,7 @@ PageInternal.propTypes = {
   pageIndex: isPageIndex,
   pageNumber: isPageNumber,
   pdf: isPdf,
+  ratio: PropTypes.number,
   registerPage: PropTypes.func,
   renderAnnotationLayer: PropTypes.bool,
   renderInteractiveForms: PropTypes.bool,

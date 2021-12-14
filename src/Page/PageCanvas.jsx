@@ -76,9 +76,14 @@ export class PageCanvasInternal extends PureComponent {
   }
 
   get renderViewport() {
-    const { page, rotate, scale } = this.props;
+    const {
+      page,
+      ratio,
+      rotate,
+      scale,
+    } = this.props;
 
-    const pixelRatio = getPixelRatio();
+    const pixelRatio = ratio || getPixelRatio();
 
     return page.getViewport({ scale: scale * pixelRatio, rotation: rotate });
   }
@@ -97,14 +102,14 @@ export class PageCanvasInternal extends PureComponent {
     }
 
     const { renderViewport, viewport } = this;
-    const { page, renderInteractiveForms } = this.props;
+    const { page, ratio, renderInteractiveForms } = this.props;
 
     canvas.width = renderViewport.width;
     canvas.height = renderViewport.height;
 
     canvas.style.width = `${Math.floor(viewport.width)}px`;
     canvas.style.height = `${Math.floor(viewport.height)}px`;
-    const pixelRatio = getPixelRatio();
+    const pixelRatio = ratio || getPixelRatio();
     const transform = pixelRatio !== 1 ? [pixelRatio, 0, 0, pixelRatio, 0, 0] : null;
 
     const renderContext = {
@@ -148,6 +153,7 @@ PageCanvasInternal.propTypes = {
   onRenderError: PropTypes.func,
   onRenderSuccess: PropTypes.func,
   page: isPage.isRequired,
+  ratio: PropTypes.number,
   renderInteractiveForms: PropTypes.bool,
   rotate: isRotate,
   scale: PropTypes.number,

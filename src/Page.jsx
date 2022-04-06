@@ -49,8 +49,9 @@ export class PageInternal extends PureComponent {
     this.loadPage();
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { pdf } = this.props;
+    const { page } = this.state;
 
     if (
       (prevProps.pdf && (pdf !== prevProps.pdf))
@@ -62,14 +63,23 @@ export class PageInternal extends PureComponent {
 
       this.loadPage();
     }
+
+    if (prevState.page !== page && prevState.page) {
+      prevState.page.cleanup();
+    }
   }
 
   componentWillUnmount() {
     const { unregisterPage } = this.props;
+    const { page } = this.state;
 
     if (unregisterPage) unregisterPage(this.pageIndex);
 
     cancelRunningTask(this.runningTask);
+
+    if (page) {
+      page.cleanup();
+    }
   }
 
   get childContext() {

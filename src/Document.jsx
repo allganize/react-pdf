@@ -70,16 +70,30 @@ export default class Document extends PureComponent {
     this.setupLinkService();
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { file } = this.props;
+    const { pdf } = this.state;
+
     if (file !== prevProps.file) {
       this.loadDocument();
+    }
+
+    if (prevState.pdf !== pdf && prevState.pdf) {
+      prevState.pdf.cleanup();
+      prevState.pdf.destroy();
     }
   }
 
   componentWillUnmount() {
     if (this.loadingTask) this.loadingTask.destroy();
     cancelRunningTask(this.runningTask);
+
+    const { pdf } = this.state;
+
+    if (pdf) {
+      pdf.cleanup();
+      pdf.destroy();
+    }
   }
 
   loadDocument = async () => {

@@ -12,6 +12,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@allganize/react-pdf@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@allganize/react-pdf@workspace:."
+  dependencies:
+    "@babel/cli": ^7.15.0
+    "@babel/core": ^7.15.0
+    "@babel/plugin-transform-runtime": ^7.15.0
+    "@babel/preset-env": ^7.15.0
+    "@babel/preset-react": ^7.14.0
+    "@babel/runtime": ^7.0.0
+    "@testing-library/jest-dom": ^5.15.0
+    "@testing-library/react": ^13.4.0
+    clsx: ^1.2.1
+    eslint: ^8.26.0
+    eslint-config-wojtekmaj: ^0.7.1
+    husky: ^8.0.0
+    jest: ^29.0.0
+    jest-canvas-mock: ^2.3.1
+    jest-environment-jsdom: ^29.0.0
+    make-cancellable-promise: ^1.0.0
+    make-event-props: ^1.1.0
+    merge-refs: ^1.0.0
+    pdfjs-dist: 2.16.105
+    prettier: ^2.7.0
+    pretty-quick: ^3.1.0
+    prop-types: ^15.6.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    rimraf: ^3.0.0
+    tiny-invariant: ^1.0.0
+    tiny-warning: ^1.0.0
+    webpack: ^5.20.0
+  peerDependencies:
+    file-loader: ^6.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    file-loader:
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -6433,48 +6475,6 @@ __metadata:
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
   languageName: node
   linkType: hard
-
-"react-pdf@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "react-pdf@workspace:."
-  dependencies:
-    "@babel/cli": ^7.15.0
-    "@babel/core": ^7.15.0
-    "@babel/plugin-transform-runtime": ^7.15.0
-    "@babel/preset-env": ^7.15.0
-    "@babel/preset-react": ^7.14.0
-    "@babel/runtime": ^7.0.0
-    "@testing-library/jest-dom": ^5.15.0
-    "@testing-library/react": ^13.4.0
-    clsx: ^1.2.1
-    eslint: ^8.26.0
-    eslint-config-wojtekmaj: ^0.7.1
-    husky: ^8.0.0
-    jest: ^29.0.0
-    jest-canvas-mock: ^2.3.1
-    jest-environment-jsdom: ^29.0.0
-    make-cancellable-promise: ^1.0.0
-    make-event-props: ^1.1.0
-    merge-refs: ^1.0.0
-    pdfjs-dist: 2.16.105
-    prettier: ^2.7.0
-    pretty-quick: ^3.1.0
-    prop-types: ^15.6.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    rimraf: ^3.0.0
-    tiny-invariant: ^1.0.0
-    tiny-warning: ^1.0.0
-    webpack: ^5.20.0
-  peerDependencies:
-    file-loader: ^6.0.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  peerDependenciesMeta:
-    file-loader:
-      optional: true
-  languageName: unknown
-  linkType: soft
 
 "react@npm:^18.2.0":
   version: 18.2.0

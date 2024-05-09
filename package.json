@@ -1,5 +1,5 @@
 {
-  "name": "react-pdf",
+  "name": "@allganize/react-pdf",
   "version": "6.2.2",
   "description": "Display PDFs in your React app as easily as if they were images.",
   "main": "dist/cjs/entry.js",
